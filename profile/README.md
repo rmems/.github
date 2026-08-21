@@ -45,7 +45,7 @@ These matter to me because they test a different skill than owning my own reposi
 - **[Hugging Face portfolio](https://huggingface.co/rmems)** — public model, dataset, telemetry, and research artifacts.
 - **[Grok-1 GOZ1 research packs](https://huggingface.co/datasets/rmems/grok-1-goz1-packs)** — packaged Grok-1 quantization research artifacts with manifests/provenance.
 - **[Agentic Coding Trajectories](https://huggingface.co/datasets/rmems/agentic-coding-trajectories)** — observable coding-agent trajectories for evaluation/training research.
-- **[Spikenaut SNN Telemetry](https://huggingface.co/datasets/rmems/Spikenaut-SNN-v2-Telemetry-Data-Weights-Parameters)** — machine telemetry and neuromorphic research data.
+- **[Spikenaut SNN Telemetry](https://huggingface.co/datasets/rmems/Spikenaut-SNN-Telemetry)** — machine telemetry and neuromorphic research data.
 
 ---
 
