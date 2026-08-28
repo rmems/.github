@@ -2,6 +2,8 @@
 
 **Early-Career AI / Research Engineer | Agentic Systems, Synthetic Data & Model Evaluation**
 
+**B.S. AI Engineering, Western Governors University — Expected Sept. 2027**
+
 San Marcos, Texas · montoyaraul34@gmail.com
 
 [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
@@ -14,7 +16,7 @@ My current research question is straightforward to state and difficult to answer
 
 > **When does model-generated supervision improve a model, when does it degrade behavior, and can provenance-aware curation, executable validation, and human/synthetic data mixing change that outcome?**
 
-My current hiring focus is **early-career AI / research engineering roles in agentic systems, model evaluation, ML systems, post-training infrastructure, and model tooling**. Neuromorphic computing remains a specialist research track rather than a prerequisite for understanding the rest of the portfolio. **Pursuing AI Engineering @ WGU.**
+My current hiring focus is **early-career AI / research engineering roles in agentic systems, model evaluation, ML systems, post-training infrastructure, and model tooling**. Neuromorphic computing remains a specialist research track rather than a prerequisite for understanding the rest of the portfolio.
 
 ---
 
