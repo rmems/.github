@@ -1,20 +1,20 @@
 # Raul Montoya Cardenas
 
-**ML Systems, Synthetic Data & Agent Evaluation Engineer**
+**Early-Career AI / Research Engineer | Agentic Systems, Synthetic Data & Model Evaluation**
 
 San Marcos, Texas · montoyaraul34@gmail.com
 
 [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
 
-> *Building reproducible post-training experiments, synthetic-data curation, and coding-agent evaluation systems on hardware I can own.*
+> *Building reproducible post-training experiments, synthetic-data curation, and agentic evaluation systems on hardware I can own.*
 
-I build **Python/Rust/CUDA infrastructure for controlled ML experiments**: synthetic-data generation and curation, real software-engineering trajectory extraction, held-out model evaluation, open-weight checkpoint analysis, model-format tooling, and neuromorphic runtimes.
+I am an **early-career AI / research engineer** focused on **agentic systems, synthetic training data, post-training evaluation, and reproducible ML experiments**. I build the surrounding infrastructure in Python, Rust, CUDA, and related systems languages: synthetic-data generation and curation, real software-engineering trajectory extraction, held-out model evaluation, open-weight checkpoint analysis, model-format tooling, and neuromorphic runtimes.
 
 My current research question is straightforward to state and difficult to answer well:
 
 > **When does model-generated supervision improve a model, when does it degrade behavior, and can provenance-aware curation, executable validation, and human/synthetic data mixing change that outcome?**
 
-My current hiring focus is **ML systems, post-training/evaluation infrastructure, coding agents, model tooling, and research engineering**. Neuromorphic computing remains a specialist research track rather than a prerequisite for understanding the rest of the portfolio. **Pursuing AI Engineering @ WGU.**
+My current hiring focus is **early-career AI / research engineering roles in agentic systems, model evaluation, ML systems, post-training infrastructure, and model tooling**. Neuromorphic computing remains a specialist research track rather than a prerequisite for understanding the rest of the portfolio. **Pursuing AI Engineering @ WGU.**
 
 ---
 
@@ -60,8 +60,8 @@ The first bounded run is local-first on an **RTX 5080 16 GiB**. Larger cloud run
 
 | Area | Evidence |
 |---|---|
+| **Agentic systems & evals** | Coding-agent trajectories, multi-agent worktree experiments, deterministic review/repair gates, executable task verification |
 | **Synthetic data & post-training** | Synthetic Factory curation gates + Agoge frozen splits, SFT manifests, base-vs-SFT held-out evaluation, and reproducible experiment artifacts |
-| **Agent systems & evals** | Coding-agent trajectories, multi-agent worktree experiments, deterministic review/repair gates, executable task verification |
 | **Real-world training evidence** | Operation Prometheus event-sourced software-engineering trajectories from public issues, patches, review, fixes, CI, and merge history |
 | **Model systems** | Raw checkpoint parsing, MoE routing analysis, GGUF/Safetensors tooling, route-preserving quantization experiments |
 | **Systems engineering** | Rust-first CLIs/runtimes, Python data/eval tooling, CUDA/GPU validation, CI, reproducible artifacts |
