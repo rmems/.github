@@ -14,7 +14,7 @@ I am an **early-career AI / research engineer** focused on **agentic systems, sy
 
 My current research question is straightforward to state and difficult to answer well:
 
-> **How do rights-cleared synthetic supervision, real engineering trajectories, provenance-aware curation, executable validation, and data mixing change downstream model behavior — while frontier hosted models remain research comparators rather than training sources?**
+> **How do rights-cleared synthetic supervision, real engineering trajectories, provenance-aware curation, executable validation, and data mixing change downstream model behavior — while frontier hosted models remain research-only comparators rather than training sources?**
 
 My current hiring focus is **early-career AI / research engineering roles in agentic systems, model evaluation, ML systems, post-training infrastructure, and model tooling**. Neuromorphic computing remains a specialist research track rather than a prerequisite for understanding the rest of the portfolio.
 
@@ -60,10 +60,10 @@ The first study is designed to compare the same open-weight starting checkpoint 
 | **A** | Untouched starting checkpoint |
 | **B** | Minimally curated rights-cleared synthetic supervision |
 | **C** | Synthetic-Factory-curated rights-cleared synthetic supervision |
-| **D** | Public/permissive real-world software-engineering trajectories |
+| **D** | Owned or permissively licensed real-world software-engineering trajectories |
 | **E** | Curated synthetic + real-world mixture |
 
-The primary question is **not which frontier generator “wins.”** Claude Fable 5, Grok 4.6, GPT-5.6-Sol, Muse Spark 1.2, and future hosted frontier systems are used as **matched research comparators** for measurements such as schema-valid yield, executable/oracle pass rate, repair behavior, trajectory diversity, failure modes, and cost/latency efficiency. They are deliberately excluded from training exports under the current project policy.
+The primary question is **not which frontier generator “wins.”** Claude Fable 5, Grok 4.6, GPT-5.6-Sol, Muse Spark 1.2, and future hosted frontier systems are used as **matched research comparators** for measurements such as schema-valid yield, executable/oracle pass rate, repair behavior, trajectory diversity, failure modes, and cost/latency efficiency. Outputs from the explicitly policy-blocked OpenAI, Anthropic, xAI, and Meta provider families are deliberately excluded from training exports; other hosted-provider outputs, including DeepSeek, are eligible only after the exact channel independently passes the rights/project-policy gate.
 
 The first bounded training run is local-first on an **RTX 5080 16 GiB**. Larger cloud runs, repeated seeds, ablations, and bigger checkpoints come only after the rights-cleared dataset → training → held-out-evaluation path is reproducible.
 
