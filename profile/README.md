@@ -80,7 +80,7 @@ The first bounded training run is local-first on an **RTX 5080 16 GiB**. Larger 
 | **Real-world training evidence** | Operation Prometheus event-sourced software-engineering trajectories from public issues, patches, review, fixes, CI, and merge history |
 | **Model systems** | Raw checkpoint parsing, MoE routing analysis, GGUF/Safetensors tooling, route-preserving quantization experiments |
 | **Systems engineering** | Rust-first CLIs/runtimes, Python data/eval tooling, CUDA/GPU validation, CI, reproducible artifacts |
-| **External OSS** | Shipped upstream xAI/Grok provider work in `agent-afk` plus Devin/Linux usage telemetry in UsagePal v0.7.70 |
+| **External OSS** | Shipped upstream xAI/Grok provider work in `agent-afk`, Devin/Linux usage telemetry in UsagePal v0.7.70, plus an active UsagePal Linux packaging/release proposal |
 | **Research specialty** | SNN / neuromorphic runtimes, telemetry-driven control, oracle-grounded simulation, FPGA-oriented export and validation |
 
 ### What I optimize for
@@ -94,6 +94,7 @@ The first bounded training run is local-first on an **RTX 5080 16 GiB**. Larger 
 ### Upstream open-source contributions
 
 - **[`UsagePal` PR #48 — Devin Linux support + richer usage telemetry](https://github.com/Halloweedev/usagepal/pull/48)** — merged upstream and shipped into the project's v0.7.70 release line. Added Linux credential discovery, Devin/Devin-Next SQLite auth paths, `DEVIN_API_KEY` fallback, ACU/quota/credit tracking, pace indicators, non-macOS panel groundwork, docs, and tests. The upstream changelog explicitly attributes the shipped Devin/Linux work to `@rmems`.
+- **[`UsagePal` issue #54 — Linux `.deb` / `.rpm` / AppImage packaging + CI release](https://github.com/Halloweedev/usagepal/issues/54)** — open upstream proposal. Scoped a Linux release lane around Tauri packaging, WebKitGTK dependencies, bundled-plugin/provider validation, tray/first-launch checks, release assets, updater behavior, and Fedora/Ubuntu installation validation. This is active follow-on work to turn the Linux groundwork into a distributable release path.
 - **[`agent-afk` PR #1019 — first-class xAI/Grok provider](https://github.com/griffinwork40/agent-afk/pull/1019)** — merged. Added API-key and SuperGrok OAuth paths, provider selection, credential handling, docs, and tests in an external codebase.
 - **[`agent-afk` PR #1242 — xAI OAuth CLI-version compatibility](https://github.com/griffinwork40/agent-afk/pull/1242)** — merged. Fixed proxy-version negotiation with validated overrides/fallbacks and project-wide validation.
 
