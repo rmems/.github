@@ -71,7 +71,7 @@ The first run is local-first on an **RTX 5080 16 GiB**. The experiment contract 
 | **[agoge-forger](https://github.com/rmems/agoge-forger)** | Local-first PyTorch post-training and evaluation tooling with configuration, artifact, checkpoint, split, and readiness contracts |
 | **[xai-dissect](https://github.com/rmems/xai-dissect)** | Rust CLI for read-only structural analysis of open Grok-1 checkpoints, including tensor inventory and MoE routing maps |
 | **[grok-ozempic](https://github.com/rmems/grok-ozempic)** | Grok-1 compression experiments centered on expert precision, routing fidelity, and residual drift |
-| **[corinth-canal](https://github.com/rmems/corinth-canal)** | Rust research pipeline connecting telemetry encoding, spiking state, projection, model inspection, MoE routing, and SAAQ validation |
+| **[corinth-canal](https://github.com/rmems/corinth-canal)** | Rust experimental pipeline connecting telemetry encoding, spiking state, projection, model inspection, MoE routing, and SAAQ validation |
 | **[Spikenaut-SNN](https://github.com/rmems/Spikenaut-SNN)** | From-scratch SNN runtime and export target for telemetry-driven neuromorphic experiments |
 
 I also maintain modular Rust and neuromorphic libraries under **[Limen Neural](https://github.com/Limen-Neural)**, including [neuromod](https://github.com/Limen-Neural/neuromod), [axon-encoder](https://github.com/Limen-Neural/axon-encoder), [nir-rs](https://github.com/Limen-Neural/nir-rs), [synaptic-mesh](https://github.com/Limen-Neural/synaptic-mesh), and [brainstem-daemon](https://github.com/Limen-Neural/brainstem-daemon).
