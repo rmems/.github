@@ -1,6 +1,6 @@
 # Raul Montoya Cardenas
 
-**Early-Career AI / Research Engineer | Agentic Systems, Model Evaluation & ML Infrastructure**
+**Early-Career AI Engineer | Experimental AI Systems, Model Evaluation & ML Infrastructure**
 
 **B.S. AI Engineering student, Western Governors University — Expected September 2027**
 
@@ -8,9 +8,9 @@ San Marcos, Texas · montoyaraul34@gmail.com
 
 [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
 
-> Building reproducible post-training, synthetic-data, model-evaluation, and agentic engineering systems on hardware I can own.
+> Building reproducible experimental AI systems for post-training, synthetic data, model evaluation, and agentic engineering on hardware I can own.
 
-I am an early-career AI / research engineer focused on **agentic systems, synthetic-data research, model evaluation, post-training infrastructure, and model tooling**. I build in Python, Rust, CUDA, and related systems languages, with an emphasis on executable validation, reproducibility, provenance, and honest separation between shipped evidence and active research.
+I am an early-career AI engineer building **experimental agentic systems, synthetic-data pipelines, model-evaluation tooling, post-training infrastructure, and model tools**. I work in Python, Rust, CUDA, and related systems languages, with an emphasis on executable validation, reproducibility, provenance, and honest separation between shipped evidence and active experiments.
 
 My current program connects three systems:
 
@@ -18,7 +18,7 @@ My current program connects three systems:
 - **Operation Prometheus** reconstructs real software-engineering trajectories from issues, patches, reviews, fixes, CI, and merges.
 - **Agoge Model Forge** turns eligible data into frozen training/evaluation contracts, local post-training runs, and held-out comparisons.
 
-Frontier hosted-model outputs remain research comparators in this program rather than weight-update data. Training candidates must independently pass the applicable provenance, license, and project-policy gates.
+Frontier hosted-model outputs remain evaluation-only comparators in this program rather than weight-update data. Training candidates must independently pass the applicable provenance, license, and project-policy gates.
 
 ---
 
@@ -33,18 +33,18 @@ Frontier hosted-model outputs remain research comparators in this program rather
 
 These contributions demonstrate work inside other maintainers' architectures: understanding existing contracts, passing review, and shipping changes upstream.
 
-### Hugging Face research collections
+### Hugging Face experiment collections
 
-- **[Synthetic Data Factory — SpaceXAI Grok 4.6](https://huggingface.co/collections/rmems/synthetic-data-factory-spacexai-grok-46)** — the Grok 4.6 research campaign, grouped as a collection of synthetic-data, provenance, and evaluation artifacts.
-- **[Synthetic Data Factory — Anthropic Claude Fable 5](https://huggingface.co/collections/rmems/synthetic-data-factory-anthropic-claude-fable-5)** — the matched Claude Fable 5 research campaign and its public synthetic-data artifacts.
-- **[Spikenaut](https://huggingface.co/collections/rmems/spikenaut)** — the neuromorphic program's models, datasets, telemetry, and event-language research artifacts.
-- **[Grok-1 Dissection and Ternary Packing](https://huggingface.co/collections/rmems/grok-1-dissection-and-ternary-packing)** — checkpoint-dissection, GOZ1 packing, quantization, and compression research organized in one collection.
+- **[Synthetic Data Factory — SpaceXAI Grok 4.6](https://huggingface.co/collections/rmems/synthetic-data-factory-spacexai-grok-46)** — the Grok 4.6 experimental campaign, grouped as a collection of synthetic-data, provenance, and evaluation artifacts.
+- **[Synthetic Data Factory — Anthropic Claude Fable 5](https://huggingface.co/collections/rmems/synthetic-data-factory-anthropic-claude-fable-5)** — the matched Claude Fable 5 experimental campaign and its public synthetic-data artifacts.
+- **[Spikenaut](https://huggingface.co/collections/rmems/spikenaut)** — the neuromorphic program's models, datasets, telemetry, and event-language experiment artifacts.
+- **[Grok-1 Dissection and Ternary Packing](https://huggingface.co/collections/rmems/grok-1-dissection-and-ternary-packing)** — checkpoint dissection, GOZ1 packing, quantization, and compression experiments organized in one collection.
 
-The hosted frontier-model collections are research artifacts; inclusion in a public collection does not make their contents eligible for model-weight updates.
+The hosted frontier-model collections are evaluation artifacts; inclusion in a public collection does not make their contents eligible for model-weight updates.
 
 ---
 
-## Current model-training program
+## Current experimental model-training program
 
 The first controlled study will compare one open-weight starting checkpoint under matched conditions:
 
@@ -66,7 +66,7 @@ The first run is local-first on an **RTX 5080 16 GiB**. The experiment contract 
 
 | Project | Evidence and purpose |
 |---|---|
-| **[synthetic-factory](https://github.com/rmems/synthetic-factory)** | Synthetic-data research with append-only evidence, provider/channel provenance, strict validation, failure-oriented fixtures, research-only frontier lanes, and active rights/project-policy enforcement |
+| **[synthetic-factory](https://github.com/rmems/synthetic-factory)** | Synthetic-data experimentation with append-only evidence, provider/channel provenance, strict validation, failure-oriented fixtures, evaluation-only frontier lanes, and active rights/project-policy enforcement |
 | **[operation-prometheus](https://github.com/rmems/operation-prometheus)** | Event-sourced software-engineering trajectory forge spanning issue, implementation, review, repair, CI, and merge history |
 | **[agoge-forger](https://github.com/rmems/agoge-forger)** | Local-first PyTorch post-training and evaluation tooling with configuration, artifact, checkpoint, split, and readiness contracts |
 | **[xai-dissect](https://github.com/rmems/xai-dissect)** | Rust CLI for read-only structural analysis of open Grok-1 checkpoints, including tensor inventory and MoE routing maps |
@@ -88,7 +88,7 @@ I also maintain modular Rust and neuromorphic libraries under **[Limen Neural](h
 | **Infrastructure** | GitHub Actions, Docker, Linux, self-hosted GPU CI, cloud-training scaffolding, automated review gates |
 | **Hardware** | NVIDIA RTX 5080 16 GiB, AMD Ryzen 9 9950X, Fedora Linux |
 
-My neuromorphic work is a specialist research track: event-driven state, telemetry-aware control, SNN runtimes, and FPGA-oriented export and validation. It complements the central agentic/model-evaluation portfolio without being required to understand it.
+My neuromorphic work is a specialist experimental track: event-driven state, telemetry-aware control, SNN runtimes, and FPGA-oriented export and validation. It complements the central agentic/model-evaluation portfolio without being required to understand it.
 
 ---
 
@@ -112,4 +112,4 @@ What I optimize for:
 
 Primary author and maintainer: **Raul Montoya Cardenas (rmems)**.
 
-Recruiter-focused structure and research-program edits were developed with OpenAI ChatGPT / Codex. Project-specific AI contributions remain attributed in their respective commits, pull requests, experiment records, and release provenance.
+Recruiter-focused structure and experimental-systems portfolio edits were developed with OpenAI ChatGPT / Codex. Project-specific AI contributions remain attributed in their respective commits, pull requests, experiment records, and release provenance.
