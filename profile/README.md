@@ -33,13 +33,14 @@ Frontier hosted-model outputs remain research comparators in this program rather
 
 These contributions demonstrate work inside other maintainers' architectures: understanding existing contracts, passing review, and shipping changes upstream.
 
-### Public ML and data artifacts
+### Hugging Face research collections
 
-- **[Hugging Face portfolio](https://huggingface.co/rmems)** — public model, dataset, telemetry, and research artifacts.
-- **[Grok-1 GOZ1 research packs](https://huggingface.co/datasets/rmems/grok-1-goz1-packs)** — packaged Grok-1 quantization research artifacts with manifests and provenance.
-- **[Agentic Coding Trajectories](https://huggingface.co/datasets/rmems/agentic-coding-trajectories)** — raw coding-agent trajectories for evaluation and research; public visibility is not a training-eligibility claim.
-- **[Neuromorphic Event-Language Bridge](https://huggingface.co/datasets/rmems/neuromorphic-event-language-bridge)** — event-stream to structured-language grounding artifacts.
-- **[Spikenaut SNN Telemetry](https://huggingface.co/datasets/rmems/Spikenaut-SNN-Telemetry)** — machine telemetry and neuromorphic research data.
+- **[Synthetic Data Factory — SpaceXAI Grok 4.6](https://huggingface.co/collections/rmems/synthetic-data-factory-spacexai-grok-46)** — the Grok 4.6 research campaign, grouped as a collection of synthetic-data, provenance, and evaluation artifacts.
+- **[Synthetic Data Factory — Anthropic Claude Fable 5](https://huggingface.co/collections/rmems/synthetic-data-factory-anthropic-claude-fable-5)** — the matched Claude Fable 5 research campaign and its public synthetic-data artifacts.
+- **[Spikenaut](https://huggingface.co/collections/rmems/spikenaut)** — the neuromorphic program's models, datasets, telemetry, and event-language research artifacts.
+- **[Grok-1 Dissection and Ternary Packing](https://huggingface.co/collections/rmems/grok-1-dissection-and-ternary-packing)** — checkpoint-dissection, GOZ1 packing, quantization, and compression research organized in one collection.
+
+The hosted frontier-model collections are research artifacts; inclusion in a public collection does not make their contents eligible for model-weight updates.
 
 ---
 
