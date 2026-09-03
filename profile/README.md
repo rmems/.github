@@ -82,7 +82,7 @@ I also maintain modular Rust and neuromorphic libraries under **[Limen Neural](h
 
 | Area | Tools and methods |
 |---|---|
-| **Languages** | Rust, Python, Julia, CUDA C/C++, SystemVerilog |
+| **Languages** | Rust, Python, Julia, CUDA C/C++ |
 | **ML systems** | PyTorch, Hugging Face, LoRA/QLoRA, MoE, GGUF, Safetensors, quantization, SNNs |
 | **Data and evaluation** | Immutable manifests, provenance and rights gates, held-out splits, leakage guards, deterministic and executable scoring, JSONL/Parquet artifacts |
 | **Infrastructure** | GitHub Actions, Docker, Linux, self-hosted GPU CI, cloud-training scaffolding, automated review gates |
