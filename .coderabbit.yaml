@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
-# Draft CodeRabbit config for rmems/.github (generated locally, not pushed).
+# CodeRabbit config for rmems/.github.
 language: en-US
 reviews:
   profile: chill
