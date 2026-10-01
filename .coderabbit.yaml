@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# Draft CodeRabbit config for rmems/.github (generated locally, not pushed).
+language: en-US
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  fail_commit_status: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+  - path: profile/README.md
+    instructions: Public GitHub profile page for rmems. Check that repository names and links resolve, badges point at the right repos, claims match the linked repos, and markdown renders on GitHub (no broken tables or relative links that only work inside a repo).
+  tools:
+    markdownlint:
+      enabled: true
+    languagetool:
+      enabled: true
