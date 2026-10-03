@@ -2,109 +2,148 @@
 
 **Early-Career AI Engineer | Experimental AI Systems, Model Evaluation & ML Infrastructure**
 
-**B.S. AI Engineering student, Western Governors University — Expected September 2027**
+B.S. AI Engineering student, Western Governors University — Expected September 2027
 
 San Marcos, Texas · montoyaraul34@gmail.com
 
 [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
 
-> Building reproducible experimental AI systems for post-training, synthetic data, model evaluation, and agentic engineering on hardware I can own.
-
-I am an early-career AI engineer building **experimental agentic systems, synthetic-data pipelines, model-evaluation tooling, post-training infrastructure, and model tools**. I work in Python, Rust, CUDA, and related systems languages, with an emphasis on executable validation, reproducibility, provenance, and honest separation between shipped evidence and active experiments.
-
-My current program connects three systems:
-
-- **Synthetic Factory** evaluates and curates synthetic-data campaigns behind provenance, rights, and project-policy gates.
-- **Operation Prometheus** reconstructs real software-engineering trajectories from issues, patches, reviews, fixes, CI, and merges.
-- **Agoge Model Forge** turns eligible data into frozen training/evaluation contracts, local post-training runs, and held-out comparisons.
-
-Frontier hosted-model outputs remain evaluation-only comparators in this program rather than weight-update data. Training candidates must independently pass the applicable provenance, license, and project-policy gates.
+I build experimental AI systems in Python, Rust, Julia, and CUDA: synthetic supervision and evaluation pipelines, neuromorphic systems, and hybrid model tools. My repositories are focused components designed for independent testing and reuse, with explicit interfaces for composing larger experiments.
 
 ---
 
-## Selected engineering proof
+## Flagship research programs
 
-### Shipped upstream contributions
+These are three research directions, each spanning several repositories. Component maturity is labeled separately in the system map; experimental outcomes are not claimed in advance.
 
-- **[UsagePal PR #56 — Antigravity metrics and Linux support](https://github.com/Halloweedev/usagepal/pull/56)** — merged upstream. Added Linux Antigravity discovery and authentication paths, host-aware language-server metadata, deterministic process/socket discovery, quota-pool reporting, burn-rate status, and macOS-target dependency isolation.
-- **[UsagePal PR #48 — Devin Linux support and richer telemetry](https://github.com/Halloweedev/usagepal/pull/48)** — merged and shipped in the v0.7.70 release line. Added Linux credential discovery, Devin/Devin-Next authentication paths, ACU/quota/credit tracking, pace indicators, documentation, and tests.
-- **[agent-afk PR #1019 — first-class xAI/Grok provider](https://github.com/griffinwork40/agent-afk/pull/1019)** — merged. Added API-key and SuperGrok OAuth paths, provider selection, credential handling, documentation, and tests.
-- **[agent-afk PR #1242 — xAI OAuth CLI compatibility](https://github.com/griffinwork40/agent-afk/pull/1242)** — merged. Fixed proxy-version negotiation with validated overrides and fallbacks.
+<a name="synthetic-supervision"></a>
 
-These contributions demonstrate work inside other maintainers' architectures: understanding existing contracts, passing review, and shipping changes upstream.
+### Synthetic supervision / training pipeline
 
-### Hugging Face experiment collections
+**Start here: [synthetic-factory](https://github.com/rmems/synthetic-factory).**
 
-- **[Synthetic Data Factory — SpaceXAI Grok 4.6](https://huggingface.co/collections/rmems/synthetic-data-factory-spacexai-grok-46)** — the Grok 4.6 experimental campaign, grouped as a collection of synthetic-data, provenance, and evaluation artifacts.
-- **[Synthetic Data Factory — Anthropic Claude Fable 5](https://huggingface.co/collections/rmems/synthetic-data-factory-anthropic-claude-fable-5)** — the matched Claude Fable 5 experimental campaign and its public synthetic-data artifacts.
-- **[Spikenaut](https://huggingface.co/collections/rmems/spikenaut)** — the neuromorphic program's models, datasets, telemetry, and event-language experiment artifacts.
-- **[Grok-1 Dissection and Ternary Packing](https://huggingface.co/collections/rmems/grok-1-dissection-and-ternary-packing)** — checkpoint dissection, GOZ1 packing, quantization, and compression experiments organized in one collection.
+| Question | My work and distinction | Evidence to inspect |
+|---|---|---|
+| How can synthetic supervision and real engineering trajectories support reproducible post-training experiments? | I develop generation and curation tooling, trajectory extraction, and training/evaluation contracts, separating data production, eligibility, and held-out comparisons through versioned artifacts. | Generators, schemas, extracted trajectory examples, validation tools, and evaluation implementations. Controlled comparisons remain planned; no training improvement is claimed. |
 
-The hosted frontier-model collections are evaluation artifacts; inclusion in a public collection does not make their contents eligible for model-weight updates.
+Program overview:
 
----
+```text
+Synthetic Factory → Operation Prometheus → Agoge Forger
+```
 
-## Current experimental model-training program
+Synthetic Factory supplies the synthetic-supervision work; [Operation Prometheus](https://github.com/rmems/operation-prometheus) extracts real engineering trajectories; [Agoge Forger](https://github.com/rmems/agoge-forger) owns post-training and evaluation. The diagram groups the program: synthetic and real trajectories are distinct inputs to Agoge, and the arrows do not establish a working serial integration.
 
-The first controlled study will compare one open-weight starting checkpoint under matched conditions:
+Deeper: [generator lanes and rights](https://github.com/rmems/synthetic-factory#generator-lanes-and-rights) · [trajectory collection and eligibility](https://github.com/rmems/operation-prometheus/tree/main/docs) · [frozen split and evaluation contracts](https://github.com/rmems/agoge-forger/blob/main/docs/frozen_split_and_eval_contracts.md).
 
-| Arm | Condition |
-|---|---|
-| **A** | Untouched starting checkpoint |
-| **B** | Minimally curated, rights-cleared synthetic supervision |
-| **C** | Synthetic-Factory-curated, rights-cleared synthetic supervision |
-| **D** | Owned or permissively licensed real engineering trajectories |
-| **E** | Curated synthetic and real-trajectory mixture |
+<a name="spikenaut"></a>
 
-The first run is local-first on an **RTX 5080 16 GiB**. The experiment contract will freeze model and tokenizer revisions, splits, seeds, metrics, leakage checks, and success/null criteria before results are inspected.
+### Spikenaut / neuromorphic systems
 
-**Current status:** infrastructure and data contracts are being hardened; no training improvement is claimed in advance. Active work includes the [Synthetic Factory rights-policy foundation](https://github.com/rmems/synthetic-factory/pull/168), [Agoge immutable readiness contracts](https://github.com/rmems/agoge-forger/pull/114), and the [Operation Prometheus eligibility and quality ledger](https://github.com/rmems/operation-prometheus/pull/64).
+**Start here: [Spikenaut-SNN](https://github.com/rmems/Spikenaut-SNN).**
 
----
+| Question | My work and distinction | Evidence to inspect |
+|---|---|---|
+| Can a small SNN represent machine state over time and support bounded supervisory behavior? | I investigate telemetry-to-SNN representations, model/export artifacts, and composition of encoding, neuron, and hardware-interface components. Learned systems propose actions; deterministic software retains safety control. | Model artifacts, Q8.8 export contracts, replay tools, and telemetry. This remains experimental: validated supervisory behavior and software–FPGA parity are unproven. |
 
-## Flagship projects
+[SynapticDistill.jl](https://github.com/rmems/SynapticDistill.jl) houses the separate Spikenaut trainer. Limen Neural libraries provide reusable encoding, neuron, graph, and wiring components; [silicon-bridge](https://github.com/rmems/silicon-bridge) provides checked parameter export. Each integration has a defined scope; these components do not establish a validated deployment chain.
 
-| Project | Evidence and purpose |
-|---|---|
-| **[synthetic-factory](https://github.com/rmems/synthetic-factory)** | Synthetic-data experimentation with append-only evidence, provider/channel provenance, strict validation, failure-oriented fixtures, evaluation-only frontier lanes, and active rights/project-policy enforcement |
-| **[operation-prometheus](https://github.com/rmems/operation-prometheus)** | Event-sourced software-engineering trajectory forge spanning issue, implementation, review, repair, CI, and merge history |
-| **[agoge-forger](https://github.com/rmems/agoge-forger)** | Local-first PyTorch post-training and evaluation tooling with configuration, artifact, checkpoint, split, and readiness contracts |
-| **[xai-dissect](https://github.com/rmems/xai-dissect)** | Rust CLI for read-only structural analysis of open Grok-1 checkpoints, including tensor inventory and MoE routing maps |
-| **[grok-ozempic](https://github.com/rmems/grok-ozempic)** | Grok-1 compression experiments centered on expert precision, routing fidelity, and residual drift |
-| **[corinth-canal](https://github.com/rmems/corinth-canal)** | Rust experimental pipeline connecting telemetry encoding, spiking state, projection, model inspection, MoE routing, and SAAQ validation |
-| **[Spikenaut-SNN](https://github.com/rmems/Spikenaut-SNN)** | From-scratch SNN runtime and export target for telemetry-driven neuromorphic experiments |
+Deeper: [research question and system model](https://github.com/rmems/Spikenaut-SNN#the-research-question).
 
-I also maintain modular Rust and neuromorphic libraries under **[Limen Neural](https://github.com/Limen-Neural)**, including [neuromod](https://github.com/Limen-Neural/neuromod), [axon-encoder](https://github.com/Limen-Neural/axon-encoder), [nir-rs](https://github.com/Limen-Neural/nir-rs), [synaptic-mesh](https://github.com/Limen-Neural/synaptic-mesh), and [brainstem-daemon](https://github.com/Limen-Neural/brainstem-daemon).
+<a name="hybrid-quantization"></a>
+
+### ANN–SNN hybrid / quantization research
+
+**Start here: [corinth-canal](https://github.com/rmems/corinth-canal).**
+
+| Question | My work and distinction | Evidence to inspect |
+|---|---|---|
+| How can spiking representations, ANN/MoE routing, and quantization be combined while assessing fidelity and computational tradeoffs? | I develop the reference experiment loop, reusable orchestration contracts, checkpoint inspection, and quantization tooling, separating integrated research from reusable component interfaces. | Reference implementations, validation runners, manifests, telemetry outputs, and experiment documentation. Implemented tooling does not establish a successful research outcome. |
+
+Corinth is the integrated research reference. [hybrid-fusion](https://github.com/rmems/hybrid-fusion) defines backend-independent orchestration contracts; [xai-dissect](https://github.com/rmems/xai-dissect) supplies checkpoint manifests for [grok-ozempic](https://github.com/rmems/grok-ozempic) quantization experiments.
+
+Deeper: [architecture](https://github.com/rmems/corinth-canal/blob/main/docs/ARCHITECTURE.md) · [run profiles and artifacts](https://github.com/rmems/corinth-canal/blob/main/docs/RUN_PROFILES.md).
 
 ---
 
-## Technical focus
+## System map
 
-| Area | Tools and methods |
-|---|---|
-| **Languages** | Rust, Python, Julia, CUDA C/C++ |
-| **ML systems** | PyTorch, Hugging Face, LoRA/QLoRA, MoE, GGUF, Safetensors, quantization, SNNs |
-| **Data and evaluation** | Immutable manifests, provenance and rights gates, held-out splits, leakage guards, deterministic and executable scoring, JSONL/Parquet artifacts |
-| **Infrastructure** | GitHub Actions, Docker, Linux, self-hosted GPU CI, cloud-training scaffolding, automated review gates |
-| **Hardware** | NVIDIA RTX 5080 16 GiB, AMD Ryzen 9 9950X, Fedora Linux |
+**Flagship** — polished repository intended for external inspection; **Active** — maintained component with documented functionality, without implying production readiness; **Experimental** — research prototype or experimental implementation; **Archived** — explicitly retired or superseded artifact.
 
-My neuromorphic work is a specialist experimental track: event-driven state, telemetry-aware control, SNN runtimes, and FPGA-oriented export and validation. It complements the central agentic/model-evaluation portfolio without being required to understand it.
+Program links group research responsibilities. Libraries can also be reused independently; membership does not imply a runtime dependency.
+
+### Data, supervision, and evaluation
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [synthetic-factory](https://github.com/rmems/synthetic-factory) | Generate, curate, and validate synthetic data with provenance and eligibility gates | Active | [Synthetic supervision](#synthetic-supervision) |
+| [operation-prometheus](https://github.com/rmems/operation-prometheus) | Extract and normalize real engineering trajectories | Active | [Synthetic supervision](#synthetic-supervision) |
+| [agoge-forger](https://github.com/rmems/agoge-forger) | Post-training, evaluation, checkpoint, and reproducibility tooling | Active | [Synthetic supervision](#synthetic-supervision) |
+
+### Neuromorphic models and reusable components
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [nir-rs](https://github.com/Limen-Neural/nir-rs) | Typed neuromorphic graphs and optional NIR file interchange | Active | [Spikenaut / SNN](#spikenaut) |
+
+**Experimental components**
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [Spikenaut-SNN](https://github.com/rmems/Spikenaut-SNN) | Telemetry-driven model artifacts, replay, and export contracts | Experimental | [Spikenaut / SNN](#spikenaut) |
+| [SynapticDistill.jl](https://github.com/rmems/SynapticDistill.jl) | Spikenaut sidecar trainer; generic e-prop/OTTT rules remain stubs | Experimental | [Spikenaut / SNN](#spikenaut) |
+| [neuromod](https://github.com/Limen-Neural/neuromod) | Reusable neuron dynamics and spiking-network primitives | Experimental | [Spikenaut / SNN](#spikenaut) |
+| [axon-encoder](https://github.com/Limen-Neural/axon-encoder) | Convert continuous signals into spikes | Experimental | [Spikenaut / SNN](#spikenaut) |
+| [synaptic-wiring](https://github.com/Limen-Neural/synaptic-wiring) | Network topology, connectivity, and temporal delays | Experimental | [Spikenaut / SNN](#spikenaut) |
+
+### Hybrid orchestration and quantization
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [xai-dissect](https://github.com/rmems/xai-dissect) | Inspect Grok-1 checkpoints and export structural manifests | Active | [Hybrid / quantization](#hybrid-quantization) |
+
+**Experimental components**
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [corinth-canal](https://github.com/rmems/corinth-canal) | Reference telemetry-to-spiking-to-MoE loop and SAAQ validation | Experimental | [Hybrid / quantization](#hybrid-quantization) |
+| [hybrid-fusion](https://github.com/rmems/hybrid-fusion) | Backend-independent ANN–SNN orchestration contracts | Experimental | [Hybrid / quantization](#hybrid-quantization) |
+| [grok-ozempic](https://github.com/rmems/grok-ozempic) | Streaming Grok-1 quantization and fidelity experiments | Experimental | [Hybrid / quantization](#hybrid-quantization) |
+
+### Hardware interfaces and acceleration
+
+**Experimental components**
+
+| Repository | Responsibility | Status | Program |
+|---|---|---|---|
+| [silicon-bridge](https://github.com/rmems/silicon-bridge) | Checked Q8.8 parameter export and host UART codecs | Experimental | [Spikenaut / SNN](#spikenaut) |
+| [myelin-accelerator](https://github.com/Limen-Neural/myelin-accelerator) | Reusable Rust/CUDA primitives for SNN, routing, and packed ternary operations | Experimental | Hardware acceleration |
+
+Explore all repositories and projects: [rmems](https://github.com/rmems?tab=repositories) · [Limen Neural](https://github.com/orgs/Limen-Neural/repositories) · [GitHub Projects](https://github.com/rmems?tab=projects).
 
 ---
 
-## Engineering practice
+## From monolith to modular systems
 
-I use coding agents heavily, with isolated branches or worktrees, local tests, linting, benchmarks or experiment gates, pull-request review, repair, and human merge decisions. Agent assistance is attributed in commits, PRs, experiment notes, or release provenance where appropriate.
+This ecosystem originated in a larger neuromorphic / AI research workspace. As interfaces and research directions matured, I progressively decomposed it into focused, interoperable repositories. Clearer boundaries support independent testing and releases, reuse, replaceable components, and experimentation, while making it easier to return to work after time away and compose larger research systems.
 
-What I optimize for:
+---
 
-**Measurable results · reproducibility · provenance · rights-aware lineage · fail-closed validation · leakage-resistant evaluation · explicit scope boundaries**
+## Selected Hugging Face artifacts
 
-### Current priorities
+[Full Hugging Face portfolio](https://huggingface.co/rmems)
 
-1. Land the end-to-end rights/project-policy boundary for Synthetic Factory and keep research-only outputs outside all weight-update paths.
-2. Freeze and execute the first local base-to-SFT held-out comparison using independently eligible data.
-3. Publish the resulting checkpoints, telemetry, evaluations, regressions, and null results with reproducible artifacts.
+- **[Spikenaut-SNN-Telemetry](https://huggingface.co/datasets/rmems/Spikenaut-SNN-Telemetry)** — telemetry for neuromorphic representation and replay experiments.
+- **[Agentic Coding Trajectories](https://huggingface.co/datasets/rmems/agentic-coding-trajectories)** — historical synthetic coding episodes, distinct from Prometheus's real engineering trajectories. Raw, not training-ready, and blocked from model-weight updates under current project policy.
+
+A published dataset or artifact does not establish training readiness or research success. Hosted frontier-model outputs remain research-only; training inputs require independent provenance, license, and project-policy eligibility.
+
+---
+
+## Selected upstream contributions
+
+- **UsagePal:** Linux support and telemetry for [Antigravity (#56)](https://github.com/Halloweedev/usagepal/pull/56) and [Devin (#48)](https://github.com/Halloweedev/usagepal/pull/48).
+- **agent-afk:** [xAI/Grok provider support (#1019)](https://github.com/griffinwork40/agent-afk/pull/1019) and [OAuth CLI compatibility (#1242)](https://github.com/griffinwork40/agent-afk/pull/1242).
 
 ---
 
@@ -112,4 +151,4 @@ What I optimize for:
 
 Primary author and maintainer: **Raul Montoya Cardenas (rmems)**.
 
-Recruiter-focused structure and experimental-systems portfolio edits were developed with OpenAI ChatGPT / Codex. Project-specific AI contributions remain attributed in their respective commits, pull requests, experiment records, and release provenance.
+Profile structure and edits were developed with OpenAI ChatGPT / Codex. Project-specific AI contributions remain attributed in commits, pull requests, experiment records, and release provenance; see [Agoge contributor guidance](https://github.com/rmems/agoge-forger/blob/main/AGENTS.md) for repository boundaries and validation practices.
