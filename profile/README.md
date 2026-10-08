@@ -4,7 +4,7 @@
 
 B.S. AI Engineering student, Western Governors University — Expected September 2027
 
-San Marcos, Texas · montoyaraul34@gmail.com
+San Marcos, Texas
 
 [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
 
