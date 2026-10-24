@@ -1,4 +1,4 @@
-# Raul Montoya Cardenas
+# Raul Cardenas Montoya
 
 **Early-Career AI Engineer | AI Systems, Model Evaluation & ML Infrastructure**
 
@@ -6,15 +6,15 @@ B.S. AI Engineering student, Western Governors University — Expected September
 
 San Marcos, Texas
 
-[GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
+[Website](https://raulcardenasmontoya.me) · [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
 
-I build open-source tools for reproducible training experiments, spiking neural networks, and ANN–SNN hybrid research. I focus on modular work that others can inspect, test, and reuse. Ten of my Rust libraries are published on [crates.io](https://crates.io/users/rmems), and I publish trajectory and evaluation datasets on [Hugging Face](https://huggingface.co/rmems) (60 datasets).
+I build open-source tools for reproducible training experiments, spiking neural networks, and ANN–SNN hybrid research. I focus on modular work that others can inspect, test, and reuse. Eleven of my Rust libraries are published on [crates.io](https://crates.io/users/rmems), and I publish trajectory and evaluation datasets on [Hugging Face](https://huggingface.co/rmems) (68 datasets).
 
 **Technical focus:** Python, Rust, Julia, CUDA · data provenance and validation · post-training and evaluation · neuromorphic models and interfaces.
 
 ## Start here
 
-- [**Rust libraries on crates.io**](https://crates.io/users/rmems) — 10 published crates (neuromod, nir-rs, axon-encoder, kinetic-signals, silicon-bridge, myelin-accelerator, …): versioned, documented, and tested.
+- [**Rust libraries on crates.io**](https://crates.io/users/rmems) — 11 published crates (neuromod, nir-rs, axon-encoder, kinetic-signals, silicon-bridge, myelin-accelerator, …): versioned, documented, and tested.
 - [**Synthetic Factory](https://github.com/rmems/synthetic-factory)&#32;/&#32;[Agoge Forger](https://github.com/rmems/agoge-forger)** — inspect data generators and eligibility checks, run the documented smoke checks, and explore frozen training/evaluation contracts.
 - [**Spikenaut-SNN**](https://github.com/rmems/Spikenaut-SNN) — inspect telemetry-driven model artifacts, replay tools, and Q8.8 export contracts, including the documented limits of the experiments.
 - [**Limen Neural**](https://github.com/Limen-Neural) — explore reusable Rust components for signal encoding, neuron dynamics, and neuromorphic graphs; follow each repository's examples and tests.
@@ -169,6 +169,6 @@ A published dataset or artifact does not establish training readiness or researc
 
 ## Attribution
 
-Primary author and maintainer: **Raul Montoya Cardenas (rmems)**.
+Primary author and maintainer: **Raul Cardenas Montoya (rmems)**.
 
  Project-specific AI contributions remain attributed in commits, pull requests, experiment records, and release provenance.
