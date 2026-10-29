@@ -42,7 +42,7 @@ These are three research directions, each spanning several repositories. Compone
 
 | Question | My work and distinction | Evidence to inspect |
 | --- | --- | --- |
-| How can synthetic supervision and real engineering trajectories support reproducible post-training experiments? | I develop generation and curation tooling, trajectory extraction, and training/evaluation contracts, separating data production, eligibility, and held-out comparisons through versioned artifacts. | Generators, schemas, extracted trajectory examples, validation tools, and evaluation implementations. In the first recorded base-vs-SFT run, the SFT gain was output formatting, not capability: with outputs fence-normalized, both scored 10/16 on hidden cases. Broader controlled comparisons remain planned; no training improvement is claimed. |
+| How can synthetic supervision and real engineering trajectories support reproducible post-training experiments? | I develop generation and curation tooling, trajectory extraction, and training/evaluation contracts, separating data production, eligibility, and held-out comparisons through versioned artifacts. | Generators, schemas, extracted trajectory examples, validation tools, and evaluation implementations. In the [first recorded base-vs-SFT run](https://raulcardenasmontoya.me/work/#agoge-forger), the SFT gain was output formatting, not capability: with outputs fence-normalized, both scored 10/16 on hidden cases. Broader controlled comparisons remain planned; no training improvement is claimed. |
 
 Planned data flow (separate potential inputs):
 
