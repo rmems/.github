@@ -15,13 +15,13 @@ I build open-source tools for reproducible training experiments, spiking neural 
 ## Start here
 
 - [**Rust libraries on crates.io**](https://crates.io/users/rmems) — 11 published crates (neuromod, nir-rs, axon-encoder, kinetic-signals, silicon-bridge, myelin-accelerator, …): versioned, documented, and tested.
-- [**Synthetic Factory](https://github.com/rmems/synthetic-factory)&#32;/&#32;[Agoge Forger](https://github.com/rmems/agoge-forger)** — inspect data generators and eligibility checks, run the documented smoke checks, and explore frozen training/evaluation contracts.
+- [**Synthetic Factory**](https://github.com/rmems/synthetic-factory)&#32;/&#32;[**Agoge Forger**](https://github.com/rmems/agoge-forger) — inspect data generators and eligibility checks, run the documented smoke checks, and explore frozen training/evaluation contracts.
 - [**Spikenaut-SNN**](https://github.com/rmems/Spikenaut-SNN) — inspect telemetry-driven model artifacts, replay tools, and Q8.8 export contracts, including the documented limits of the experiments.
 - [**Limen Neural**](https://github.com/Limen-Neural) — explore reusable Rust components for signal encoding, neuron dynamics, and neuromorphic graphs; follow each repository's examples and tests.
 
 ## Selected upstream contributions
 
-- **UsagePal:** merged Linux support and telemetry work for [Antigravity (#56)](https://github.com/Halloweedev/usagepal/pull/56) and [Devin (#48)](https://github.com/Halloweedev/usagepal/pull/48).
+- **UsagePal:** merged Linux support and telemetry work for [Antigravity (#56)](https://github.com/Halloweedev/usagepal/pull/56) and [Devin (#48)](https://github.com/Halloweedev/usagepal/pull/48), plus [Grok usage costs (#67)](https://github.com/Halloweedev/usagepal/pull/67).
 - **agent-afk:** merged [xAI/Grok provider support (#1019)](https://github.com/griffinwork40/agent-afk/pull/1019) and [OAuth CLI compatibility (#1242)](https://github.com/griffinwork40/agent-afk/pull/1242).
 
 ## Current priorities
@@ -42,7 +42,7 @@ These are three research directions, each spanning several repositories. Compone
 
 | Question | My work and distinction | Evidence to inspect |
 | --- | --- | --- |
-| How can synthetic supervision and real engineering trajectories support reproducible post-training experiments? | I develop generation and curation tooling, trajectory extraction, and training/evaluation contracts, separating data production, eligibility, and held-out comparisons through versioned artifacts. | Generators, schemas, extracted trajectory examples, validation tools, and evaluation implementations. Controlled comparisons remain planned; no training improvement is claimed. |
+| How can synthetic supervision and real engineering trajectories support reproducible post-training experiments? | I develop generation and curation tooling, trajectory extraction, and training/evaluation contracts, separating data production, eligibility, and held-out comparisons through versioned artifacts. | Generators, schemas, extracted trajectory examples, validation tools, and evaluation implementations. In the first recorded base-vs-SFT run, the SFT gain was output formatting, not capability: with outputs fence-normalized, both scored 10/16 on hidden cases. Broader controlled comparisons remain planned; no training improvement is claimed. |
 
 Planned data flow (separate potential inputs):
 
@@ -110,22 +110,27 @@ Program links group research responsibilities. Libraries can also be reused inde
 | Repository | Responsibility | Status | Program |
 | --- | --- | --- | --- |
 | [nir-rs](https://github.com/Limen-Neural/nir-rs) | Typed neuromorphic graphs and optional NIR file interchange | Published | [Spikenaut / SNN](#spikenaut) |
+| [kinetic-signals](https://github.com/rmems/kinetic-signals) | Dependency-light temporal and stochastic feature primitives for online systems | Published | [Spikenaut / SNN](#spikenaut) |
+| [corpus-ipc](https://github.com/Limen-Neural/corpus-ipc) | Transport and schema substrate for distributed neuromorphic components | Published | [Spikenaut / SNN](#spikenaut) |
 
 **Research components**
 
 | Repository | Responsibility | Status | Program |
 | --- | --- | --- | --- |
 | [Spikenaut-SNN](https://github.com/rmems/Spikenaut-SNN) | Telemetry-driven model artifacts, replay, and export contracts | Research | [Spikenaut / SNN](#spikenaut) |
-| [SynapticDistill.jl](https://github.com/rmems/SynapticDistill.jl) | Spikenaut sidecar trainer; generic e-prop/OTTT rules remain stubs | Research | [Spikenaut / SNN](#spikenaut) |
+| [SynapticDistill.jl](https://github.com/rmems/SynapticDistill.jl) | Spikenaut sidecar trainer; modular e-prop/OTTT/surrogate rules live in the library but are not used by the sidecar script | Research | [Spikenaut / SNN](#spikenaut) |
 | [neuromod](https://github.com/Limen-Neural/neuromod) | Reusable neuron dynamics and spiking-network primitives | Published · Research | [Spikenaut / SNN](#spikenaut) |
 | [axon-encoder](https://github.com/Limen-Neural/axon-encoder) | Convert continuous signals into spikes | Published · Research | [Spikenaut / SNN](#spikenaut) |
 | [synaptic-wiring](https://github.com/Limen-Neural/synaptic-wiring) | Network topology, connectivity, and temporal delays | Published · Research | [Spikenaut / SNN](#spikenaut) |
+| [limbic-critic](https://github.com/Limen-Neural/limbic-critic) | Neuromodulatory reward-shaping primitive for SNN plasticity | Published · Research | [Spikenaut / SNN](#spikenaut) |
+| [plasticity-lab](https://github.com/Limen-Neural/plasticity-lab) | Offline and closed-loop reward-modulated SNN training | Published · Research | [Spikenaut / SNN](#spikenaut) |
 
 ### Hybrid orchestration and quantization
 
 | Repository | Responsibility | Status | Program |
 | --- | --- | --- | --- |
 | [xai-dissect](https://github.com/rmems/xai-dissect) | Inspect Grok-1 checkpoints and export structural manifests | Active | [Hybrid / quantization](#hybrid-quantization) |
+| [engram-parser](https://github.com/rmems/engram-parser) | Pure-Rust GGUF and Safetensors checkpoint and tensor substrate | Published | [Hybrid / quantization](#hybrid-quantization) |
 
 **Research components**
 
@@ -171,4 +176,4 @@ A published dataset or artifact does not establish training readiness or researc
 
 Primary author and maintainer: **Raul Cardenas Montoya (rmems)**.
 
- Project-specific AI contributions remain attributed in commits, pull requests, experiment records, and release provenance.
+Project-specific AI contributions remain attributed in commits, pull requests, experiment records, and release provenance.
