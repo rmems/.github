@@ -4,13 +4,27 @@
 
 B.S. AI Engineering student, Western Governors University — Expected September 2027
 
-San Marcos, Texas
+Austin Metropolitan Area, Texas (San Marcos)
 
 [Website](https://raulcardenasmontoya.me) · [GitHub Projects](https://github.com/rmems?tab=projects) · [Hugging Face](https://huggingface.co/rmems) · [Limen Neural](https://github.com/Limen-Neural)
+
+*On this page: [Currently](#currently) · [Start here](#start-here) · [Upstream contributions](#selected-upstream-contributions) · [Priorities](#current-priorities) · [Research programs](#flagship-research-programs) · [Component map](#component-map) · [Hugging Face artifacts](#selected-hugging-face-artifacts)*
 
 I build open-source tools for reproducible training experiments, spiking neural networks, and ANN–SNN hybrid research. I focus on modular work that others can inspect, test, and reuse. Eleven of my Rust libraries are published on [crates.io](https://crates.io/users/rmems), and I publish trajectory and evaluation datasets on [Hugging Face](https://huggingface.co/rmems) (68 datasets).
 
 **Technical focus:** Python, Rust, Julia, CUDA · data provenance and validation · post-training and evaluation · neuromorphic models and interfaces.
+
+Open to AI engineering roles (intern or junior) and research collaborations — [get in touch](https://raulcardenasmontoya.me/contact/).
+
+[![crates.io](https://img.shields.io/badge/crates.io-11%20published-orange?logo=rust&logoColor=white)](https://crates.io/users/rmems) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-68%20datasets-yellow)](https://huggingface.co/rmems) [![Languages](https://img.shields.io/badge/languages-Python%20%7C%20Rust%20%7C%20Julia%20%7C%20CUDA-informational)](https://github.com/rmems?tab=repositories)
+
+## Currently
+
+*Last updated: November 2026 — refresh this section as work shifts.*
+
+- Reliability, test, and documentation passes across writ, synthetic-factory, operation-prometheus, and agoge-forger.
+- Controlled base-vs-SFT comparison runs under frozen split and evaluation contracts.
+- Upstream contributions and collaborator-friendly tooling (usagepal, agent-afk, writ).
 
 ## Start here
 
