@@ -10,26 +10,28 @@ Austin Metropolitan Area, Texas
 
 *On this page: [Currently](#currently) · [Start here](#start-here) · [Upstream contributions](#selected-upstream-contributions) · [Priorities](#current-priorities) · [Research programs](#flagship-research-programs) · [Component map](#component-map) · [Hugging Face artifacts](#selected-hugging-face-artifacts)*
 
-I build open-source tools for reproducible training experiments, spiking neural networks, and ANN–SNN hybrid research. I focus on modular work that others can inspect, test, and reuse. Eleven of my Rust libraries are published on [crates.io](https://crates.io/users/rmems), and I publish trajectory and evaluation datasets on [Hugging Face](https://huggingface.co/rmems) (68 datasets).
+I build open-source tools for reproducible training experiments, spiking neural networks, and ANN–SNN hybrid research. I focus on modular work that others can inspect, test, and reuse. Eleven of my Rust libraries are published on [crates.io](https://crates.io/users/rmems), and I publish trajectory and evaluation datasets on [Hugging Face](https://huggingface.co/rmems) (70 datasets). My current data work is a set of focused synthetic-data factories — medical education, tutoring, emotional resilience, and code repair — each built to feed a controlled post-training experiment.
 
 **Technical focus:** Python, Rust, Julia, CUDA · data provenance and validation · post-training and evaluation · neuromorphic models and interfaces.
 
 Open to AI engineering roles (intern or junior) and research collaborations — [get in touch](https://raulcardenasmontoya.me/contact/).
 
-[![crates.io](https://img.shields.io/badge/crates.io-11%20published-orange?logo=rust&logoColor=white)](https://crates.io/users/rmems) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-68%20datasets-yellow)](https://huggingface.co/rmems) [![Languages](https://img.shields.io/badge/languages-Python%20%7C%20Rust%20%7C%20Julia%20%7C%20CUDA-informational)](https://github.com/rmems?tab=repositories)
+[![crates.io](https://img.shields.io/badge/crates.io-11%20published-orange?logo=rust&logoColor=white)](https://crates.io/users/rmems) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-70%20datasets-yellow)](https://huggingface.co/rmems) [![Languages](https://img.shields.io/badge/languages-Python%20%7C%20Rust%20%7C%20Julia%20%7C%20CUDA-informational)](https://github.com/rmems?tab=repositories)
 
 ## Currently
 
 *Last updated: November 2026 — refresh this section as work shifts.*
 
-- Reliability, test, and documentation passes across writ, synthetic-factory, operation-prometheus, and agoge-forger.
+- Building four focused synthetic-data factories for post-training: [medsynth](https://github.com/rmems/medsynth) (medical education), [AI-ML-SWE-synthetic-tutor](https://github.com/rmems/AI-ML-SWE-synthetic-tutor) (tutoring dialogues), [euthymia](https://github.com/rmems/euthymia) (emotional resilience), and synthetic-factory's python-repair-v2, the first release candidate.
 - Controlled base-vs-SFT comparison runs under frozen split and evaluation contracts.
+- Reliability, test, and documentation passes across writ, synthetic-factory, operation-prometheus, and agoge-forger.
 - Upstream contributions and collaborator-friendly tooling (usagepal, agent-afk, writ).
 
 ## Start here
 
 - [**Rust libraries on crates.io**](https://crates.io/users/rmems) — 11 published crates (neuromod, nir-rs, axon-encoder, kinetic-signals, silicon-bridge, myelin-accelerator, …): versioned, documented, and tested.
 - [**Synthetic Factory**](https://github.com/rmems/synthetic-factory)&#32;/&#32;[**Agoge Forger**](https://github.com/rmems/agoge-forger) — inspect data generators and eligibility checks, run the documented smoke checks, and explore frozen training/evaluation contracts.
+- [**medsynth**](https://github.com/rmems/medsynth)&#32;/&#32;[**AI-ML-SWE-synthetic-tutor**](https://github.com/rmems/AI-ML-SWE-synthetic-tutor)&#32;/&#32;[**euthymia**](https://github.com/rmems/euthymia) — the dataset factories: medical-education, tutoring, and emotional-resilience synthetic data, each with schemas, gold seeds, and fail-closed validation gates.
 - [**Spikenaut-SNN**](https://github.com/rmems/Spikenaut-SNN) — inspect telemetry-driven model artifacts, replay tools, and Q8.8 export contracts, including the documented limits of the experiments.
 - [**Limen Neural**](https://github.com/Limen-Neural) — explore reusable Rust components for signal encoding, neuron dynamics, and neuromorphic graphs; follow each repository's examples and tests.
 
@@ -40,6 +42,7 @@ Open to AI engineering roles (intern or junior) and research collaborations — 
 
 ## Current priorities
 
+- Ship python-repair-v2 in synthetic-factory as the first release candidate, then the medsynth, tutor, and euthymia dataset families — small, per-family Hugging Face datasets with provenance and eligibility gates.
 - Reduce technical debt across [writ](https://github.com/rmems/writ), [synthetic-factory](https://github.com/rmems/synthetic-factory), [operation-prometheus](https://github.com/rmems/operation-prometheus), and [agoge-forger](https://github.com/rmems/agoge-forger): improve reliability, tests, documentation, and reproducibility while simplifying unnecessary complexity. This work is ongoing.
 - Keep writ collaboration-first: remove redundant enforcement while preserving safeguards for existing work and other contributors' changes.
 - Prepare controlled training/evaluation comparisons with independently eligible data, frozen contracts, and reproducible artifacts. Research outcomes remain unproven.
@@ -73,6 +76,19 @@ Operation Prometheus: real engineering ──────────┘   proje
 Synthetic Factory's generation and validation tools, [Operation Prometheus](https://github.com/rmems/operation-prometheus)'s trajectory collection tools, and [Agoge Forger](https://github.com/rmems/agoge-forger)'s training/evaluation contracts are implemented in their respective repositories. The converging arrows describe the intended experiment design, not a completed end-to-end integration. Each input must independently pass provenance, license, and project-policy gates before training; hosted frontier-model outputs remain research-only and excluded from model-weight updates.
 
 Deeper: [generator lanes and rights](https://github.com/rmems/synthetic-factory#generator-lanes-and-rights) · [trajectory collection and eligibility](https://github.com/rmems/operation-prometheus/tree/main/docs) · [frozen split and evaluation contracts](https://github.com/rmems/agoge-forger/blob/main/docs/frozen_split_and_eval_contracts.md).
+
+#### Dataset factories and future models
+
+The training-data work is now split into focused factories instead of one monolith. Each factory owns one domain, ships small per-family datasets, and must pass its own schema, gold-seed, and validation gates before any of its data is eligible for training:
+
+| Factory | Domain | Intended model |
+| --- | --- | --- |
+| [synthetic-factory](https://github.com/rmems/synthetic-factory) — python-repair-v2 | Execution-verified Python code repair | First release candidate; base-vs-SFT comparison under the frozen contract above |
+| [medsynth](https://github.com/rmems/medsynth) | Pre-med / medical education, anchored to a source registry | Gemma 4 12B Unified fine-tune; MedGemma 1.5 4B as the evaluation baseline |
+| [AI-ML-SWE-synthetic-tutor](https://github.com/rmems/AI-ML-SWE-synthetic-tutor) | Multi-turn tutoring dialogues (math first, then ML math and other languages) | A model trained to tutor — diagnose, question, hint — not only to answer |
+| [euthymia](https://github.com/rmems/euthymia) | Emotional Resilience Engineering: ~250 SFT examples plus preference pairs, fictionalized scenarios only | A model that responds to distress with directness and warmth instead of flattery or dependency |
+
+No factory dataset is training-ready until its gates pass, and no training improvement is claimed in advance — the same research-integrity boundary as the rest of this page.
 
 <a name="spikenaut"></a>
 
@@ -118,6 +134,9 @@ Program links group research responsibilities. Libraries can also be reused inde
 | [synthetic-factory](https://github.com/rmems/synthetic-factory) | Generate, curate, and validate synthetic data with provenance and eligibility gates | Active | [Synthetic supervision](#synthetic-supervision) |
 | [operation-prometheus](https://github.com/rmems/operation-prometheus) | Extract and normalize real engineering trajectories | Active | [Synthetic supervision](#synthetic-supervision) |
 | [agoge-forger](https://github.com/rmems/agoge-forger) | Post-training, evaluation, checkpoint, and reproducibility tooling | Active | [Synthetic supervision](#synthetic-supervision) |
+| [medsynth](https://github.com/rmems/medsynth) | Synthetic data for pre-med / medical education, anchored to a source registry | Active | [Synthetic supervision](#synthetic-supervision) |
+| [AI-ML-SWE-synthetic-tutor](https://github.com/rmems/AI-ML-SWE-synthetic-tutor) | Synthetic multi-turn tutoring dialogues for post-training | Active | [Synthetic supervision](#synthetic-supervision) |
+| [euthymia](https://github.com/rmems/euthymia) | Synthetic data for Emotional Resilience Engineering (fictionalized scenarios only) | Active | [Synthetic supervision](#synthetic-supervision) |
 
 ### Neuromorphic models and reusable components
 
@@ -181,6 +200,7 @@ This ecosystem originated in a larger neuromorphic / AI research workspace. As i
 
 - [**Spikenaut-SNN-Telemetry**](https://huggingface.co/datasets/rmems/Spikenaut-SNN-Telemetry) — telemetry for neuromorphic representation and replay experiments.
 - [**Agentic Coding Trajectories**](https://huggingface.co/datasets/rmems/agentic-coding-trajectories) — historical synthetic coding episodes, distinct from Prometheus's real engineering trajectories. Raw, not training-ready, and blocked from model-weight updates under current project policy.
+- [**RE4 Remake hardware telemetry**](https://huggingface.co/datasets/rmems/re4-remake-hardware-telemetry) / [**GTA IV Remix hardware telemetry**](https://huggingface.co/datasets/rmems/gta4-remix-hardware-telemetry) — recent hardware-telemetry datasets (70k and 224k rows) for representation and replay experiments.
 
 A published dataset or artifact does not establish training readiness or research success. Hosted frontier-model outputs remain research-only; training inputs require independent provenance, license, and project-policy eligibility.
 
