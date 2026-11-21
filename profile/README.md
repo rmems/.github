@@ -31,7 +31,7 @@ Open to AI engineering roles (intern or junior) and research collaborations — 
 
 - [**Rust libraries on crates.io**](https://crates.io/users/rmems) — 11 published crates (neuromod, nir-rs, axon-encoder, kinetic-signals, silicon-bridge, myelin-accelerator, …): versioned, documented, and tested.
 - [**Synthetic Factory**](https://github.com/rmems/synthetic-factory)&#32;/&#32;[**Agoge Forger**](https://github.com/rmems/agoge-forger) — inspect data generators and eligibility checks, run the documented smoke checks, and explore frozen training/evaluation contracts.
-- [**medsynth**](https://github.com/rmems/medsynth)&#32;/&#32;[**AI-ML-SWE-synthetic-tutor**](https://github.com/rmems/AI-ML-SWE-synthetic-tutor)&#32;/&#32;[**euthymia**](https://github.com/rmems/euthymia) — the dataset factories: medical-education, tutoring, and emotional-resilience synthetic data, each with schemas, gold seeds, and fail-closed validation gates.
+- [**medsynth**](https://github.com/rmems/medsynth)&#32;/&#32;[**AI-ML-SWE-synthetic-tutor**](https://github.com/rmems/AI-ML-SWE-synthetic-tutor)&#32;/&#32;[**euthymia**](https://github.com/rmems/euthymia) — the dataset factories: medical-education, tutoring, and emotional-resilience synthetic data, each built on schemas, with gold seeds and fail-closed validation gates landing factory by factory.
 - [**Spikenaut-SNN**](https://github.com/rmems/Spikenaut-SNN) — inspect telemetry-driven model artifacts, replay tools, and Q8.8 export contracts, including the documented limits of the experiments.
 - [**Limen Neural**](https://github.com/Limen-Neural) — explore reusable Rust components for signal encoding, neuron dynamics, and neuromorphic graphs; follow each repository's examples and tests.
 
@@ -73,20 +73,20 @@ Operation Prometheus: real engineering ──────────┘   proje
                                                     training / evaluation
 ```
 
-Synthetic Factory's generation and validation tools, [Operation Prometheus](https://github.com/rmems/operation-prometheus)'s trajectory collection tools, and [Agoge Forger](https://github.com/rmems/agoge-forger)'s training/evaluation contracts are implemented in their respective repositories. The converging arrows describe the intended experiment design, not a completed end-to-end integration. Each input must independently pass provenance, license, and project-policy gates before training; hosted frontier-model outputs remain research-only and excluded from model-weight updates.
+Synthetic Factory's generation and validation tools, [Operation Prometheus](https://github.com/rmems/operation-prometheus)'s trajectory collection tools, and [Agoge Forger](https://github.com/rmems/agoge-forger)'s training/evaluation contracts are implemented in their respective repositories. The converging arrows describe the intended experiment design, not a completed end-to-end integration. Each input must independently pass provenance, license, and project-policy gates before training; hosted frontier-model outputs remain research-only and excluded from model-weight updates. The dataset factories below (medsynth, AI-ML-SWE-synthetic-tutor, euthymia) are additional planned inputs through the same eligibility gates.
 
 Deeper: [generator lanes and rights](https://github.com/rmems/synthetic-factory#generator-lanes-and-rights) · [trajectory collection and eligibility](https://github.com/rmems/operation-prometheus/tree/main/docs) · [frozen split and evaluation contracts](https://github.com/rmems/agoge-forger/blob/main/docs/frozen_split_and_eval_contracts.md).
 
 #### Dataset factories and future models
 
-The training-data work is now split into focused factories instead of one monolith. Each factory owns one domain, ships small per-family datasets, and must pass its own schema, gold-seed, and validation gates before any of its data is eligible for training:
+The training-data work is now split into focused factories instead of one monolith. Each factory owns one domain, is built to ship small per-family datasets, and must pass its own schema, gold-seed, and validation gates before any of its data is eligible for training:
 
 | Factory | Domain | Intended model |
 | --- | --- | --- |
 | [synthetic-factory](https://github.com/rmems/synthetic-factory) — python-repair-v2 | Execution-verified Python code repair | First release candidate; base-vs-SFT comparison under the frozen contract above |
 | [medsynth](https://github.com/rmems/medsynth) | Pre-med / medical education, anchored to a source registry | Gemma 4 12B Unified fine-tune; MedGemma 1.5 4B as the evaluation baseline |
 | [AI-ML-SWE-synthetic-tutor](https://github.com/rmems/AI-ML-SWE-synthetic-tutor) | Multi-turn tutoring dialogues (math first, then ML math and other languages) | A model trained to tutor — diagnose, question, hint — not only to answer |
-| [euthymia](https://github.com/rmems/euthymia) | Emotional Resilience Engineering: ~250 SFT examples plus preference pairs, fictionalized scenarios only | A model that responds to distress with directness and warmth instead of flattery or dependency |
+| [euthymia](https://github.com/rmems/euthymia) | Emotional Resilience Engineering: target ~250 SFT examples plus preference pairs, fictionalized scenarios only | A model that responds to distress with directness and warmth instead of flattery or dependency |
 
 No factory dataset is training-ready until its gates pass, and no training improvement is claimed in advance — the same research-integrity boundary as the rest of this page.
 
